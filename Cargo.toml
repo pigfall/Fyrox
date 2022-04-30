@@ -60,7 +60,8 @@ strum_macros = "0.23.1"
 enable_profiler = ["rg3d-core/enable_profiler"]
 
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
-glutin = {version = "0.28.0", features = ["serde"] }
+#glutin = {version = "0.28.0", features = ["serde"] }
+glutin = { git = "https://github.com/pigfall/glutin.git" , branch="tzz_dev", features = ["serde"] }
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
 winit = { version = "0.26.0", features = ["serde"] }
